@@ -1,0 +1,17 @@
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\bin\Debug\net7.0\Shop.Data.deps.json
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\bin\Debug\net7.0\Shop.Data.runtimeconfig.json
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\bin\Debug\net7.0\Shop.Data.dll
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\bin\Debug\net7.0\Shop.Data.pdb
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\bin\Debug\net7.0\Shop.Core.dll
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\bin\Debug\net7.0\Shop.Core.pdb
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\Shop.Data.csproj.AssemblyReference.cache
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\Shop.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\Shop.Data.AssemblyInfoInputs.cache
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\Shop.Data.AssemblyInfo.cs
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\Shop.Data.csproj.CoreCompileInputs.cache
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\Shop.Data.csproj.CopyComplete
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\Shop.Data.dll
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\refint\Shop.Data.dll
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\Shop.Data.pdb
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\Shop.Data.genruntimeconfig.cache
+C:\Users\Samedusa\Desktop\ShopApp\Shop.Data\obj\Debug\net7.0\ref\Shop.Data.dll
