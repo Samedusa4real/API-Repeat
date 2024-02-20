@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Shop.Services.Implementations
 {
@@ -52,22 +53,69 @@ namespace Shop.Services.Implementations
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var entity = _productRepository.Get(x => x.Id == id);
+
+            if (entity == null)
+                throw new RestException(System.Net.HttpStatusCode.NotFound, "Product is not exist!");
+
+            _productRepository.Remove(entity);
+            _productRepository.Commit();
+
+            string rootPath = Directory.GetCurrentDirectory() + "/wwwroot";
+            FileManager.Delete(rootPath, "uploads/products", entity.ImageName);
         }
 
         public void Edit(int id, ProductPutDto putDto)
         {
-            throw new NotImplementedException();
+            var entity = _productRepository.Get(x => x.Id == id);
+
+            if (entity == null)
+                throw new RestException(System.Net.HttpStatusCode.NotFound, "Product is not exist!");
+
+            List<RestExceptionError> errors = new List<RestExceptionError>();
+
+            if (!_brandRepository.IsExist(x => x.Id == putDto.BrandId))
+                errors.Add(new RestExceptionError("BrandId", "Brand is not valid!"));
+
+            if (putDto.Name != entity.Name && _productRepository.IsExist(x => x.Name == putDto.Name))
+                errors.Add(new RestExceptionError("Name", "Name is already exist!"));
+
+            entity.Name = putDto.Name;
+            entity.CostPrice = putDto.CostPrice;
+            entity.SalePrice = putDto.SalePrice;
+            entity.DiscountPercent = putDto.DiscountPercent;
+            entity.BrandId = putDto.BrandId;
+
+            string removableFileName = null;
+            string rootPath = Directory.GetCurrentDirectory() + "/wwwroot";
+
+            if (putDto.ImageFile != null)
+            {
+                removableFileName = entity.ImageName;
+                entity.ImageName = FileManager.Save(putDto.ImageFile, rootPath, "uploads/products");
+            }
+
+            _productRepository.Commit();
+
+            if (removableFileName != null)
+                FileManager.Delete(rootPath, "uploads/products", removableFileName);
         }
 
         public ProductGetDto Get(int id)
         {
-            throw new NotImplementedException();
+            var entity = _productRepository.Get(x => x.Id == id, "Brand");
+
+            if (entity == null)
+                throw new RestException(System.Net.HttpStatusCode.NotFound, "Product is not exist!");
+
+            return _mapper.Map<ProductGetDto>(entity);
         }
 
         public List<ProductGetAllItemDto> GetAll()
         {
-            throw new NotImplementedException();
+            var entities = _productRepository.GetAll(x => true, "Brand");
+
+            return _mapper.Map<List<ProductGetAllItemDto>>(entities);
         }
     }
 }

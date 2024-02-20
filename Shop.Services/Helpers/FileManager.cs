@@ -21,5 +21,15 @@ namespace Shop.Services.Helpers
 
             return newFileName; 
         }
+
+        public static void Delete(string rootPath, string folders, string fileName)
+        {
+            string path = Path.Combine(rootPath,folders, fileName);
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
     }
 }

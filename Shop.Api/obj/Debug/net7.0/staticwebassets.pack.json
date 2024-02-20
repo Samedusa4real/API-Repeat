@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Api\\wwwroot\\uploads\\products\\1497c5a8-0482-4e39-8c47-f62f0562e501plane4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\1497c5a8-0482-4e39-8c47-f62f0562e501plane4.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Shop.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Shop.Api.props",
+      "PackagePath": "build\\Shop.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Shop.Api.props",
+      "PackagePath": "buildMultiTargeting\\Shop.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Shop.Api.props",
+      "PackagePath": "buildTransitive\\Shop.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4/7niHvPxD9bVPYoiQrSWJ4NuynVOrrbRFF3KwfkY5A=",
+  "Hash": "4Evf67C4gFHAuof2xVAnoxSTeEeFkDhQZTaJ+KjKY48=",
   "Source": "Shop.Api",
   "BasePath": "_content/Shop.Api",
   "Mode": "Default",
@@ -15,5 +15,23 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Api\\wwwroot\\uploads\\products\\1497c5a8-0482-4e39-8c47-f62f0562e501plane4.jpg",
+      "SourceId": "Shop.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Api\\wwwroot\\",
+      "BasePath": "_content/Shop.Api",
+      "RelativePath": "uploads/products/1497c5a8-0482-4e39-8c47-f62f0562e501plane4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\1497c5a8-0482-4e39-8c47-f62f0562e501plane4.jpg"
+    }
+  ]
 }

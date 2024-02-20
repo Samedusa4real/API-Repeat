@@ -14,16 +14,10 @@ namespace Shop.Api.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductRepository _productRepository;
-        private readonly IBrandRepository _brandRepository;
-        private readonly IMapper _mapper;
         private readonly IProductService _productService;
 
-        public ProductsController(IProductRepository productRepository, IBrandRepository brandRepository, IMapper mapper, IProductService productService)
+        public ProductsController(IProductService productService)
         {
-            _productRepository = productRepository;
-            _brandRepository = brandRepository;
-            _mapper = mapper;
             _productService = productService;
         }
 
@@ -36,32 +30,13 @@ namespace Shop.Api.Controllers
         [HttpGet("all")]
         public ActionResult<List<ProductGetAllItemDto>> GetAll()
         {
-            var data = _mapper.Map<List<ProductGetAllItemDto>>(_productRepository.GetAll(x=> true, "Brand"));
-
-            return Ok(data);
+            return Ok(_productService.GetAll());
         }
 
         [HttpPut("{id}")]
-        public IActionResult Edit(int id, ProductPutDto productPutDto)
+        public IActionResult Edit(int id,[FromForm] ProductPutDto productPutDto)
         {
-            Product product = _productRepository.Get(x => x.Id == id);
-
-            if (product == null)
-                return NotFound();
-
-            if (!_brandRepository.IsExist(x => x.Id == productPutDto.BrandId))
-            {
-                ModelState.AddModelError("BrandId", "BrandId is not correct!");
-                return BadRequest(ModelState);
-            }
-
-            product.CostPrice = productPutDto.CostPrice;
-            product.SalePrice = productPutDto.SalePrice;
-            product.DiscountPercent = productPutDto.DiscountPercent;
-            product.Name = productPutDto.Name;
-            product.BrandId = productPutDto.BrandId;
-
-            _productRepository.Commit();
+            _productService.Edit(id, productPutDto);
 
             return NoContent();
         }
@@ -69,14 +44,7 @@ namespace Shop.Api.Controllers
         [HttpGet("{id}")]
         public ActionResult<ProductGetDto> Get(int id)
         {
-            Product product = _productRepository.Get(x => x.Id == id, "Brand");
-
-            if (product == null)
-                return NotFound();
-
-            var data = _mapper.Map<ProductGetDto>(product);
-
-            return Ok(data);
+            return Ok(_productService.Get(id));
         }
 
     }
