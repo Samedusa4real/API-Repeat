@@ -23,4 +23,8 @@
     <ProjectReference Include="..\Shop.Services\Shop.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\products\" />
+  </ItemGroup>
+
 </Project>

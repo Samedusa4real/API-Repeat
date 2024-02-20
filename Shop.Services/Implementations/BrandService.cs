@@ -3,6 +3,7 @@ using Shop.Core.Entities;
 using Shop.Core.Repositories;
 using Shop.Services.Dtos.BrandDtos;
 using Shop.Services.Dtos.CommonDtos;
+using Shop.Services.Exceptions;
 using Shop.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace Shop.Services.Implementations
         public CreatedDto Create(BrandPostDto postDto)
         {
             if (_brandRepository.IsExist(x => x.Name == postDto.Name))
-                throw new Exception();
+                throw new RestException(System.Net.HttpStatusCode.BadRequest,"Name", "BrandName is already taken!");
             
             var entity = _mapper.Map<Brand>(postDto);
 
@@ -40,7 +41,7 @@ namespace Shop.Services.Implementations
             var entity = _brandRepository.Get(x => x.Id == id);
 
             if (entity != null)
-                throw new Exception();
+                throw new RestException(System.Net.HttpStatusCode.NotFound, "Missing information");
 
             _brandRepository.Remove(entity);
             _brandRepository.Commit();
@@ -48,12 +49,23 @@ namespace Shop.Services.Implementations
 
         public void Edit(int id, BrandPutDto putDto)
         {
-            throw new NotImplementedException();
+            var entity = _brandRepository.Get(x => x.Id == id);
+
+            if (entity != null)
+                throw new RestException(System.Net.HttpStatusCode.NotFound, "Missing information");
+
+            if (entity.Name != putDto.Name && _brandRepository.IsExist(x => x.Name == putDto.Name))
+                throw new RestException(System.Net.HttpStatusCode.BadRequest, "Name", "BrandName is already taken!");
+
+            entity.Name = putDto.Name;
+            _brandRepository.Commit();
         }
 
         public List<BrandGetAllItemDto> GetAll()
         {
-            throw new NotImplementedException();
+            var entities = _brandRepository.GetAll(x => true);
+
+            return _mapper.Map<List<BrandGetAllItemDto>>(entities);
         }
     }
 }

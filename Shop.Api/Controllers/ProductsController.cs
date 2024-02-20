@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Shop.Core.Entities;
 using Shop.Core.Repositories;
 using Shop.Services.Dtos.ProductDtos;
+using Shop.Services.Interfaces;
 
 namespace Shop.Api.Controllers
 {
@@ -16,29 +17,20 @@ namespace Shop.Api.Controllers
         private readonly IProductRepository _productRepository;
         private readonly IBrandRepository _brandRepository;
         private readonly IMapper _mapper;
+        private readonly IProductService _productService;
 
-        public ProductsController(IProductRepository productRepository, IBrandRepository brandRepository, IMapper mapper)
+        public ProductsController(IProductRepository productRepository, IBrandRepository brandRepository, IMapper mapper, IProductService productService)
         {
             _productRepository = productRepository;
             _brandRepository = brandRepository;
             _mapper = mapper;
+            _productService = productService;
         }
 
         [HttpPost("")]
-        public IActionResult Create(ProductPostDto productPostDto)
+        public IActionResult Create([FromForm] ProductPostDto productPostDto)
         {
-            if(!_brandRepository.IsExist(x=>x.Id == productPostDto.BrandId))
-            {
-                ModelState.AddModelError("BrandId", "BrandId is not correct!");
-                return BadRequest(ModelState);  
-            }
-
-            Product product = _mapper.Map<Product>(productPostDto);
-
-            _productRepository.Add(product);
-            _productRepository.Commit();
-
-            return StatusCode(201, new {Id = product.Id});
+            return StatusCode(201, _productService.Create(productPostDto));
         }
 
         [HttpGet("all")]

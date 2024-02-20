@@ -160,3 +160,4 @@ C:\Users\Samedusa\Desktop\API-Repeat\Shop.Api\obj\Debug\net7.0\Shop.Api.genrunti
 C:\Users\Samedusa\Desktop\API-Repeat\Shop.Api\obj\Debug\net7.0\ref\Shop.Api.dll
 C:\Users\Samedusa\Desktop\API-Repeat\Shop.Api\bin\Debug\net7.0\Shop.Services.dll
 C:\Users\Samedusa\Desktop\API-Repeat\Shop.Api\bin\Debug\net7.0\Shop.Services.pdb
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Api\bin\Debug\net7.0\Shop.Api.staticwebassets.runtime.json

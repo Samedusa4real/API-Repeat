@@ -17,6 +17,7 @@ namespace Shop.Data.Configurations
             builder.Property(x => x.CostPrice).HasColumnType("money");
             builder.Property(x => x.SalePrice).HasColumnType("money");
             builder.Property(x => x.DiscountPercent).HasColumnType("money");
+            builder.Property(x => x.ImageName).HasMaxLength(100);
         }
     }
 }
