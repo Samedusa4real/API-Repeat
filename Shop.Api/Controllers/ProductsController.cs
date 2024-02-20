@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Shop.Api.Dtos.ProductDtos;
 using Shop.Core.Entities;
 using Shop.Core.Repositories;
+using Shop.Services.Dtos.ProductDtos;
 
 namespace Shop.Api.Controllers
 {

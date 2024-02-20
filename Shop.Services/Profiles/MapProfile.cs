@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using Shop.Api.Dtos.BrandDtos;
-using Shop.Api.Dtos.ProductDtos;
+using Shop.Services.Dtos.BrandDtos;
+using Shop.Services.Dtos.ProductDtos;
 using Shop.Core.Entities;
 
-namespace Shop.Api.Profiles
+namespace Shop.Services.Profiles
 {
     public class MapProfile:Profile
     {

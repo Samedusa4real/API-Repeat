@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kYiHnc9RQgoxUvu6ZJpNvf9UzpRllM2Xl3OyayRdkAiLtvc8V744FETma+R4XPKjbRSH6ZQXJ8b1IVAyDxgNcg==",
+  "dgSpecHash": "FwJYCVfRMxiBk+A6TH7OyUXtJfyMoHvYxVV5Zu/kJciP4gEUrBcaQZ3aUFJ4Gt2c3zsGlklS6Y0WwXP8tkOn3w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Api\\Shop.Api.csproj",
+  "projectFilePath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Api\\Shop.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Samedusa\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Samedusa\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

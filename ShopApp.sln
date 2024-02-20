@@ -3,19 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Api", "Shop.Api\Shop.Api.csproj", "{AEF555DC-B100-482C-B6AE-50F70C9C7DEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Api", "Shop.Api\Shop.Api.csproj", "{AEF555DC-B100-482C-B6AE-50F70C9C7DEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Core", "Shop.Core\Shop.Core.csproj", "{734F9C59-165A-438A-9396-E669BFDC4D7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Core", "Shop.Core\Shop.Core.csproj", "{734F9C59-165A-438A-9396-E669BFDC4D7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Data", "Shop.Data\Shop.Data.csproj", "{4968284A-D30C-4969-A3E1-183FF731F833}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Data", "Shop.Data\Shop.Data.csproj", "{4968284A-D30C-4969-A3E1-183FF731F833}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Services", "Shop.Services\Shop.Services.csproj", "{0D094305-FC91-4AA1-9121-AD15CAAE5565}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AEF555DC-B100-482C-B6AE-50F70C9C7DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +29,12 @@ Global
 		{4968284A-D30C-4969-A3E1-183FF731F833}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4968284A-D30C-4969-A3E1-183FF731F833}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4968284A-D30C-4969-A3E1-183FF731F833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D094305-FC91-4AA1-9121-AD15CAAE5565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D094305-FC91-4AA1-9121-AD15CAAE5565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D094305-FC91-4AA1-9121-AD15CAAE5565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D094305-FC91-4AA1-9121-AD15CAAE5565}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

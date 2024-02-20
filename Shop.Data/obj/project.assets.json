@@ -2209,11 +2209,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Data\\Shop.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Data\\Shop.Data.csproj",
       "projectName": "Shop.Data",
-      "projectPath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Data\\Shop.Data.csproj",
+      "projectPath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Data\\Shop.Data.csproj",
       "packagesPath": "C:\\Users\\Samedusa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Data\\obj\\",
+      "outputPath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Samedusa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2230,8 +2230,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Core\\Shop.Core.csproj": {
-              "projectPath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Core\\Shop.Core.csproj"
+            "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Core\\Shop.Core.csproj": {
+              "projectPath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Core\\Shop.Core.csproj"
             }
           }
         }

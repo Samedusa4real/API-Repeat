@@ -1,0 +1,17 @@
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\bin\Debug\net7.0\Shop.Services.deps.json
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\bin\Debug\net7.0\Shop.Services.dll
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\bin\Debug\net7.0\Shop.Services.pdb
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\bin\Debug\net7.0\Shop.Core.dll
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\bin\Debug\net7.0\Shop.Data.dll
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\bin\Debug\net7.0\Shop.Data.pdb
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\bin\Debug\net7.0\Shop.Core.pdb
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\Shop.Services.csproj.AssemblyReference.cache
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\Shop.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\Shop.Services.AssemblyInfoInputs.cache
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\Shop.Services.AssemblyInfo.cs
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\Shop.Services.csproj.CoreCompileInputs.cache
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\Shop.Services.csproj.CopyComplete
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\Shop.Services.dll
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\refint\Shop.Services.dll
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\Shop.Services.pdb
+C:\Users\Samedusa\Desktop\API-Repeat\Shop.Services\obj\Debug\net7.0\ref\Shop.Services.dll

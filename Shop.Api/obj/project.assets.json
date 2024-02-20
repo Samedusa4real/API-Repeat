@@ -1232,6 +1232,21 @@
         "runtime": {
           "bin/placeholder/Shop.Data.dll": {}
         }
+      },
+      "Shop.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "Shop.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shop.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Services.dll": {}
+        }
       }
     }
   },
@@ -3306,6 +3321,11 @@
       "type": "project",
       "path": "../Shop.Data/Shop.Data.csproj",
       "msbuildProject": "../Shop.Data/Shop.Data.csproj"
+    },
+    "Shop.Services/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Services/Shop.Services.csproj",
+      "msbuildProject": "../Shop.Services/Shop.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3316,7 +3336,7 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.27",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.27",
-      "Shop.Data >= 1.0.0",
+      "Shop.Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -3326,11 +3346,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Api\\Shop.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Api\\Shop.Api.csproj",
       "projectName": "Shop.Api",
-      "projectPath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Api\\Shop.Api.csproj",
+      "projectPath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Api\\Shop.Api.csproj",
       "packagesPath": "C:\\Users\\Samedusa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Api\\obj\\",
+      "outputPath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Samedusa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3347,8 +3367,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Data\\Shop.Data.csproj": {
-              "projectPath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Data\\Shop.Data.csproj"
+            "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Services\\Shop.Services.csproj": {
+              "projectPath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Services\\Shop.Services.csproj"
             }
           }
         }

@@ -1,4 +1,4 @@
-﻿namespace Shop.Api.Dtos.BrandDtos
+﻿namespace Shop.Services.Dtos.BrandDtos
 {
     public class BrandGetAllItemDto
     {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O3TS1Uam1lhINywPDvFMPqHlj4W2NkcatKxhJxuCU+wi45zR3MJ+pMPq4Nie3XBRLkyb9lGXwgTUeA60fc1xpQ==",
+  "dgSpecHash": "QgxsfIKkrxdH3o4OJWwdhlXnK3jehPx6Nn8V7OkafNe6n/VZnLAm2ZKCJO9s/VxbZ4BMx4XeWH8Kl/9Qty15Gw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Data\\Shop.Data.csproj",
+  "projectFilePath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Data\\Shop.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Samedusa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Samedusa\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.27\\microsoft.aspnetcore.cryptography.internal.6.0.27.nupkg.sha512",

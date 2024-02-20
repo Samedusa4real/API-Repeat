@@ -14,7 +14,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.27",
           "Microsoft.AspNetCore.OpenApi": "7.0.5",
           "Microsoft.EntityFrameworkCore.Design": "6.0.27",
-          "Shop.Data": "1.0.0",
+          "Shop.Services": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -667,6 +667,16 @@
         "runtime": {
           "Shop.Data.dll": {}
         }
+      },
+      "Shop.Services/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "Shop.Data": "1.0.0"
+        },
+        "runtime": {
+          "Shop.Services.dll": {}
+        }
       }
     }
   },
@@ -1172,6 +1182,11 @@
       "sha512": ""
     },
     "Shop.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shop.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

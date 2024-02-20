@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Shop.Api.Dtos.ProductDtos
+namespace Shop.Services.Dtos.ProductDtos
 {
     public class ProductPostDto
     {

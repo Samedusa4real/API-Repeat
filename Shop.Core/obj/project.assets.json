@@ -824,11 +824,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Core\\Shop.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Core\\Shop.Core.csproj",
       "projectName": "Shop.Core",
-      "projectPath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Core\\Shop.Core.csproj",
+      "projectPath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Core\\Shop.Core.csproj",
       "packagesPath": "C:\\Users\\Samedusa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Samedusa\\Desktop\\ShopApp\\Shop.Core\\obj\\",
+      "outputPath": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Samedusa\\AppData\\Roaming\\NuGet\\NuGet.Config",

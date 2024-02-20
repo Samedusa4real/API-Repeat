@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Shop.Api.Dtos.BrandDtos;
-using Shop.Api.Profiles;
 using Shop.Core.Entities;
 using Shop.Core.Repositories;
 using Shop.Data;
 using Shop.Data.Repositories;
+using Shop.Services.Dtos.BrandDtos;
+using Shop.Services.Implementations;
+using Shop.Services.Interfaces;
+using Shop.Services.Profiles;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,7 +35,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 
 builder.Services.AddScoped<IBrandRepository,BrandRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-
+builder.Services.AddScoped<IBrandService, BrandService>();
 
 builder.Services.AddFluentValidationRulesToSwagger();
 
