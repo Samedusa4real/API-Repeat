@@ -1,3 +1,4 @@
+using AutoMapper;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
@@ -52,15 +53,17 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddFluentValidationRulesToSwagger();
 
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<BrandPostDtoValidator>();
 
-builder.Services.AddAutoMapper(opt =>
+builder.Services.AddScoped(provider => new MapperConfiguration(cfg =>
 {
-    opt.AddProfile(new MapProfile());
-});
+    cfg.AddProfile(new MapProfile(provider.GetService<IHttpContextAccessor>()));
+}).CreateMapper());
 
 builder.Services.AddSwaggerGen(c =>
 {

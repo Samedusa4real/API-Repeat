@@ -8,6 +8,7 @@
         public string BrandName { get; set; }
         public decimal SalePrice { get; set; }
         public bool HasDiscount { get; set; }
+        public string ImageUrl { get; set; }
     }
 
 }

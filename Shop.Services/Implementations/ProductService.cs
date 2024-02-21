@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Shop.Core.Entities;
 using Shop.Core.Repositories;
 using Shop.Services.Dtos.CommonDtos;
@@ -20,12 +21,14 @@ namespace Shop.Services.Implementations
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
         private readonly IBrandRepository _brandRepository;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public ProductService(IProductRepository productRepository, IMapper mapper, IBrandRepository brandRepository)
+        public ProductService(IProductRepository productRepository, IMapper mapper, IBrandRepository brandRepository, IHttpContextAccessor httpContextAccessor)
         {
             _productRepository = productRepository;
             _mapper = mapper;
             _brandRepository = brandRepository;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public CreatedDto Create(ProductPostDto postDto)

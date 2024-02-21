@@ -262,7 +262,6 @@ namespace Shop.Data.Migrations
                         .HasColumnType("money");
 
                     b.Property<string>("ImageName")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 

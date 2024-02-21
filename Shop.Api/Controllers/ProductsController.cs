@@ -9,7 +9,7 @@ using Shop.Services.Interfaces;
 
 namespace Shop.Api.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
