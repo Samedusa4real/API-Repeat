@@ -14,5 +14,6 @@ namespace Shop.Services.Interfaces
         void Edit(int id, BrandPutDto putDto);
         List<BrandGetAllItemDto> GetAll();
         void Delete(int id);
+        BrandGetDto Get(int id);
     }
 }

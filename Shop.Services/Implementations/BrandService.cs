@@ -40,7 +40,7 @@ namespace Shop.Services.Implementations
         {
             var entity = _brandRepository.Get(x => x.Id == id);
 
-            if (entity != null)
+            if (entity == null)
                 throw new RestException(System.Net.HttpStatusCode.NotFound, "Missing information");
 
             _brandRepository.Remove(entity);
@@ -59,6 +59,16 @@ namespace Shop.Services.Implementations
 
             entity.Name = putDto.Name;
             _brandRepository.Commit();
+        }
+
+        public BrandGetDto Get(int id)
+        {
+            var entity = _brandRepository.Get(x => x.Id == id, "Products");
+
+            if (entity == null)
+                throw new RestException(System.Net.HttpStatusCode.NotFound, "Missing information");
+
+            return _mapper.Map<BrandGetDto>(entity);
         }
 
         public List<BrandGetAllItemDto> GetAll()

@@ -28,6 +28,8 @@ namespace Shop.Services.Profiles
             CreateMap<BrandPostDto, Brand>();
             CreateMap<Brand, BrandGetAllItemDto>();
             CreateMap<Brand, BrandInProductGetDto>();
+            CreateMap<Brand, BrandGetDto>();
+
         }
     }
 }

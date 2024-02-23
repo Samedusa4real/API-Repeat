@@ -45,8 +45,13 @@ namespace Shop.Api.Controllers
         [HttpGet("all")]
         public ActionResult<List<BrandGetAllItemDto>> GetAll()
         {
-
             return Ok(_brandService.GetAll());
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<BrandGetDto> Get(int id)
+        {
+            return Ok(_brandService.Get(id));
         }
     }
 }

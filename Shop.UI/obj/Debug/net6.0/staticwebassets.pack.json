@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\js\\demo\\datatables-demo.js"
     },
     {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.UI\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
       "Id": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.UI\\wwwroot\\js\\sb-admin-2.js",
       "PackagePath": "staticwebassets\\js\\sb-admin-2.js"
     },

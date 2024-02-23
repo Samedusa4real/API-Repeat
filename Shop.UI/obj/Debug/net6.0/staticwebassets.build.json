@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ddGZIjB/kYl2/qlmgNx8Oydkreh8uBLlHcix/7ILbQs=",
+  "Hash": "KjH1KguJeX0A29hZVecIzbnO8mSwgWGylZRR9Ywp8KM=",
   "Source": "Shop.UI",
   "BasePath": "_content/Shop.UI",
   "Mode": "Default",
@@ -253,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\demo\\datatables-demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.UI\\wwwroot\\js\\main.js",
+      "SourceId": "Shop.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.UI\\wwwroot\\",
+      "BasePath": "_content/Shop.UI",
+      "RelativePath": "js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\main.js"
     },
     {
       "Identity": "C:\\Users\\Samedusa\\Desktop\\API-Repeat\\Shop.UI\\wwwroot\\js\\sb-admin-2.js",
