@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json;
 using Shop.UI.Models;
 
@@ -13,6 +14,9 @@ namespace Shop.UI.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            var token = Request.Cookies["auth_token"];
+            _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, token);
+
             using (var response = await _client.GetAsync("https://localhost:7000/api/Brands/all"))
             {
                 if (response.IsSuccessStatusCode)
@@ -22,6 +26,8 @@ namespace Shop.UI.Controllers
 
                     return View(data);
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return RedirectToAction("login", "account");
             }
             return View("error");
         }
@@ -35,6 +41,9 @@ namespace Shop.UI.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(BrandCreateRequest brand)
         {
+            var token = Request.Cookies["auth_token"];
+            _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, token);
+
             if (!ModelState.IsValid) return View();
 
             StringContent content = new StringContent(JsonConvert.SerializeObject(brand), System.Text.Encoding.UTF8, "application/json");
@@ -54,6 +63,8 @@ namespace Shop.UI.Controllers
 
                     return View();
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return RedirectToAction("login", "account");
             }
 
             return View("error");
@@ -61,6 +72,9 @@ namespace Shop.UI.Controllers
 
         public async Task<IActionResult> Edit(int id)
         {
+            var token = Request.Cookies["auth_token"];
+            _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, token);
+
             using (var response = await _client.GetAsync($"https://localhost:7000/api/Brands/{id}"))
             {
                 if (response.IsSuccessStatusCode)
@@ -71,6 +85,8 @@ namespace Shop.UI.Controllers
 
                     return View(vm);
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return RedirectToAction("login", "account");
             }
 
             return View("Error");
@@ -84,6 +100,10 @@ namespace Shop.UI.Controllers
                 return View();
 
             StringContent content = new StringContent(JsonConvert.SerializeObject(brand), System.Text.Encoding.UTF8, "application/json");
+
+            var token = Request.Cookies["auth_token"];
+            _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, token);
+
             using (var response = await _client.PutAsync($"https://localhost:7000/api/Brands/{id}", content))
             {
                 if (response.IsSuccessStatusCode)
@@ -98,8 +118,9 @@ namespace Shop.UI.Controllers
                         ModelState.AddModelError(item.Key, item.Message);
 
                     return View();
-
                 }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return RedirectToAction("login", "account");
             }
 
             return View("Error");
@@ -107,10 +128,15 @@ namespace Shop.UI.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
+            var token = Request.Cookies["auth_token"];
+            _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, token);
+
             using (var response = await _client.DeleteAsync($"https://localhost:7000/api/Brands/{id}"))
             {
                 if (response.IsSuccessStatusCode)
                     return Ok();
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                    return Unauthorized();
             }
 
             return NotFound();
